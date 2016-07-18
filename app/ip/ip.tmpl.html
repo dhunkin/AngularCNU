@@ -1,0 +1,16 @@
+<br>
+<p>(This is the partial for IP geolocation.)</p>
+<br>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="ip">IP:&nbsp;</label>
+    <input type="text" class="form-control" id="ip" placeholder="Enter IP address"
+      ng-model="ipToResolve"
+    >
+    <button class="btn btn-default"
+      ng-click="resolveLocation()"
+    >Resolve</button>
+  </div>
+  <br><br>
+  <p ng-bind="ipLocation"></p>
+</form>

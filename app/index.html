@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- we will use html5 -->
+
+<html lang="en" ng-app="cnuApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AngularJS - CNU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+  <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak {display: none !important}
+  </style>
+</head>
+<body>
+
+  <div class="container our-wrapper">
+
+    
+    <div class="row">
+      <div class="col-md-12">
+        <h3>AngularJS - CNU - <span ng-bind="currentPageTitle"></span></h3>
+
+        <p class="desc-info">
+          (this is the sample page for <span class="red-span">Web UI</span> discussion)
+        </p>
+
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-primary" ui-sref="time">Time</button>
+          <button type="button" class="btn btn-success" ui-sref="ip">IP</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row" style="border: 1px solid red;">
+      <div ui-view></div>
+    </div>
+
+  </div>
+
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="app.js"></script>
+  <script src="time/time.ctrl.js"></script>
+  <script src="ip/ip.ctrl.js"></script>
+</body>
+</html>
